@@ -1,0 +1,328 @@
+/* header */
+
+html {
+  background-color: white;
+}
+
+body {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+  font-family: "Open Sans", sans-serif;
+  background-color: white;
+}
+
+h1,
+h2,
+h3,
+li a {
+  font-family: "IM Fell DW Pica SC", serif;
+  color: black;
+}
+
+.logo-picture {
+  width: 100%;
+}
+
+.logo-banner {
+  position: relative;
+}
+
+h1 {
+  position: absolute;
+  left: 10%;
+  bottom: 25%;
+  font-size: 50px;
+}
+
+h2,
+h3 {
+  font-size: 30px;
+}
+
+ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  width: 659px;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  padding: 14px 50px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+li a:hover {
+  background-color: black;
+  color: white;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+nav {
+  position: relative;
+  background-color: white;
+}
+
+.search-container {
+  position: absolute;
+  top: 2px;
+  right: 0;
+}
+
+.search-container input[type="text"] {
+  padding: 6px 2px;
+  margin-top: 5px;
+  font-size: 18px;
+  background-color: white;
+  color: black;
+  float: left;
+}
+
+.search-container button {
+  float: right;
+  padding: 10px 10px;
+  background: white;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-search {
+  display: none;
+}
+
+.nav-info {
+  margin-left: 20px;
+  font-style: italic;
+  color: grey;
+}
+
+.nav-info-link {
+  color: grey;
+  text-decoration: underline;
+}
+
+.search-container input {
+  display: none;
+}
+
+/* main */
+
+main {
+  margin: 0;
+  padding: 0;
+}
+
+.error {
+  background: red;
+  color: rgb(82, 1, 1);
+  border: 2px solid rgb(82, 1, 1);
+  max-width: 200px;
+  max-height: 50px;
+  margin: 40px auto;
+  padding: 10px;
+}
+
+#hamburger-menu,
+.fas {
+  display: none;
+}
+
+/* footer*/
+
+footer {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #d5cdc8;
+}
+
+.social-media {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.footer-box {
+  margin-top: 20px;
+}
+
+.footer-links {
+  text-decoration: underline;
+  color: black;
+}
+
+.footer-links:hover {
+  color: white;
+  background-color: white;
+}
+
+.author {
+  text-transform: uppercase;
+}
+
+/* media queries */
+
+@media only screen and (max-width: 1300px) {
+  body {
+    max-width: 1000px;
+  }
+
+  h1 {
+    position: absolute;
+    left: 9%;
+    font-size: 40px;
+    top: 38%;
+  }
+
+  .search-container input[type="text"] {
+    width: 120px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+    max-width: 800px;
+    position: relative;
+  }
+
+  h1 {
+    position: absolute;
+    font-size: 33px;
+  }
+
+  nav {
+    display: none;
+    animation: move 0.7s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes move {
+    from {
+      top: -100px;
+      opacity: 0.1;
+    }
+    to {
+      top: 0px;
+      opacity: 1;
+    }
+  }
+
+  #hamburger-menu:checked ~ nav {
+    display: block;
+  }
+
+  .fas {
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    background-color: white;
+    border-radius: 30%;
+    padding: 10px;
+    font-size: 30px;
+    margin: 20px 20px;
+    cursor: pointer;
+  }
+
+  ul {
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  li {
+    float: none;
+  }
+
+  li a {
+    color: black;
+    text-align: center;
+  }
+
+  #hamburger-menu {
+    display: none;
+  }
+
+  .mobile-search {
+    display: block;
+    top: 205px;
+    right: 40px;
+  }
+
+  .mobile-search button {
+    background-color: #f4eeeb;
+  }
+
+  .contact-category {
+    border-bottom: 1px solid black;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    position: relative;
+  }
+
+  .logo-picture {
+    display: none;
+  }
+
+  .logo-banner {
+    background-image: url("../../images/logo-banner.jpg");
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .logo-picture {
+    display: none;
+  }
+
+  li a {
+    text-align: left;
+  }
+
+  .mobile-search {
+    display: block;
+    top: 205px;
+    right: 40px;
+  }
+
+  .mobile-search button {
+    background-color: #f4eeeb;
+  }
+
+  .logo-banner {
+    background-image: url("../../images/logo-banner2.jpg");
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  h1 {
+    left: 60px;
+    top: 90px;
+    font-size: 34px;
+  }
+
+  footer {
+    flex-direction: column;
+    border-top: 1px solid black;
+    text-align: center;
+  }
+}

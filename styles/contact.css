@@ -1,0 +1,72 @@
+@import "imports/general.css";
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+main form {
+  padding: 2em;
+  background: #f8f8f8;
+  border-radius: 1rem;
+  position: relative;
+}
+
+#message {
+  height: 120px;
+  font-family: "Open Sans";
+}
+
+main input,
+#message {
+  width: 100%;
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+#submit {
+  background-color: #b0aba9;
+  border: none;
+  width: 200px;
+  padding: 1rem;
+  color: white;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  border: 1px solid white;
+  font-size: 0.8rem;
+}
+
+#submit:hover {
+  background-color: white;
+  color: #b0aba9;
+  border: 1px solid #b0aba9;
+}
+
+main label {
+  display: block;
+  margin-top: 1rem;
+}
+
+.container iframe {
+  width: 100%;
+  height: 700px;
+  border: none;
+}
+
+.container p {
+  width: 95%;
+  margin: 10px auto;
+}
+
+.form-error {
+  display: none;
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 2px;
+}
