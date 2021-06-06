@@ -17,7 +17,6 @@ async function blogList(url) {
     try {
         const response = await fetch(url + `posts?per_page=12&_embed`);
         const results = await response.json();
-        console.log(results);
 
         slides[0].innerHTML = "";
 
@@ -50,7 +49,6 @@ async function blogList(url) {
             
     }
     catch(error) {
-        console.log(error);
         slides[0].innerHTML = showError("Something went wrong.");
     }
 }
@@ -80,7 +78,6 @@ function individualCarouselPosts(results,container,extraClass) {
 
                     }
 
-console.log(slideShowContainer);
 
 /* desktop function */
 var slideIndex = 1;
@@ -117,7 +114,6 @@ function slidesGeneral(n, slidenumber, dottype) {
     
     var slideLength = slidenumber.length;
     var dotLength = dottype.length;
-    console.log(slideIndex);
 
  if (n > slideLength) {slideIndex = 1}
  if (n < 1) {slideIndex = slideLength}

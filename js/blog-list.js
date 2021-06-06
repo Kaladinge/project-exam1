@@ -11,7 +11,6 @@ async function blogList(url) {
     try {
         const response = await fetch(url + `posts?per_page=10&_embed`);
         const results = await response.json();
-        console.log(results);
 
         blogContainer.innerHTML = "";
 
@@ -45,13 +44,11 @@ async function blogList(url) {
 
                     }
                 } catch(error) {
-                    console.log(error);
                     blogContainer.innerHTML += showError("Something went wrong.");
                 }    
                 }
     }
     catch(error) {
-        console.log(error);
         blogContainer.innerHTML = showError("Something went wrong.");
     }
 }
@@ -131,7 +128,7 @@ function presentCategory(event) {
                                 </div>`
             }
         } catch(error) {
-                        console.log(error);
+                        blogContainer.innerHTML = showError("Something went wrong.");
                     }   
     }
         categoryList();

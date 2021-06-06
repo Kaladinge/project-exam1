@@ -17,7 +17,6 @@ async function blogList(url) {
     try {
         const response = await fetch(url + `posts?per_page=12&_embed`);
         const results = await response.json();
-        console.log(results);
 
         slides[0].innerHTML = "";
 
@@ -50,7 +49,6 @@ async function blogList(url) {
             
     }
     catch(error) {
-        console.log(error);
         slides[0].innerHTML = showError("Something went wrong.");
     }
 }
@@ -79,7 +77,6 @@ function individualCarouselPosts(results,container,extraClass) {
 
                     }
 
-console.log(slideShowContainer);
 
 
 var slideIndex = 1;
@@ -95,14 +92,10 @@ function showSlides(n) {
     var slideLength = slides.length;
     var dotLength = dots.length;
 
-    console.log(slideLength);
-
- console.log(slides);
- console.log(slideLength);
 
  if (n > slideLength) {slideIndex = 1}
  if (n < 1) {slideIndex = slideLength}
- console.log(n);
+ 
 for (i = 0; i < slideLength; i++) {
     slides[i].style.display = "none";
 }
@@ -111,7 +104,7 @@ for (i = 0; i < dotLength; i++) {
     dots[i].className = dots[i].className.replace(" active-dot", "");
 }
 
-console.log(slides[slideIndex-1]);
+
 dots[slideIndex-1].className += " active-dot";
 slides[slideIndex-1].style.display = "block";
 }
@@ -132,7 +125,7 @@ function showSlidesMobile(m) {
 
     if (m > lengthy) {slideIndexMobile = 1}
     if (m < 1) {slideIndexMobile = lengthy}
-    console.log(m);
+    
  
     for (i = 0; i < lengthy; i++) {
     mobileSlides[i].style.display = "none";

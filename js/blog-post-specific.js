@@ -18,7 +18,6 @@ const params = new URLSearchParams(queryString);
 
 const id = params.get("id");
 
-console.log(id);
 
 const apiUrl = "https://larsingeprojects.one/guitarrr/wp-json/wp/v2/posts/" + id;
 
@@ -35,7 +34,6 @@ async function fetchApi(url) {
 
         });
 
-        console.log(json);
 
         title.innerHTML = json.title.rendered;
             
@@ -73,7 +71,6 @@ async function fetchApi(url) {
             });
 
     } catch (error) {
-        console.log(error);
         blogpostContainer.innerHTML = showError("Something went wrong.");
     }
 };
